@@ -1,0 +1,110 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Custom properties -- update these for your own design */
+
+:root {
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-dark: #202d36ff;
+    --clr-accent: #2b3743;
+
+    --fs-h1: 1.5rem;
+    --fs-h2: 1.25rem;
+    --fs-h3: 1rem;
+    --fs-body: .8rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 2.25rem;
+        --fs-h2: 1.75rem;
+        --fs-h3: 1.25rem;
+        --fs-body: 1rem;
+    }
+}
+
+/* Typography */
+
+body {
+    color: var(--clr-light);
+    font-family: var(--ff-primary);
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1)}
+h2 { font-size: var(--fs-h2)}
+h3 { font-size: var(--fs-h3)}
+
+.section__title {
+    margin-bottom: .25em;
+}
+
+.section__subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.header__button {
+    font-size: var(--fs-h2)
+}
+
+/* Other Styles */
+
+body {
+    background-color: var(--clr-dark); 
+    margin: 0;
+}
+
+.header, .controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+.header {
+    background-color: var(--clr-accent);
+}
+
+/* .header__title {
+
+}
+
+.header__button {
+
+} */
+
+/* Country grid */
+
+.countries {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.countries__item {
+    margin: 2em;
+    background-color: var(--clr-accent);
+    max-width: 300px;
+    height: 300px;
+    padding: 2em;
+    border-radius: .25em;
+    box-shadow: var(--bs)
+}
