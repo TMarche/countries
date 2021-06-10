@@ -65,8 +65,10 @@ class App  extends React.Component {
                         x.region.toLowerCase().includes(this.state.regionFilter.toLowerCase()))
                     .map( (x) =>
                     <CountryCard
+                        flag={x.flag}
                         name={x.name}
                         // toLocaleString adds commas separators to numbers
+                        // https://stackoverflow.com/questions/27761543/how-do-i-display-large-numbers-with-commas-html
                         population={x.population.toLocaleString()}
                         region={x.region}
                         capital={x.capital}
